@@ -1,0 +1,64 @@
+package main;
+
+import java.util.Scanner;
+public class Main {
+    private static Matrix m1,m2,ans,A,B;
+    public static void main(String args[]) {
+        int i = 0, j = 0,r=0,c=0;
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Enter row:");
+        r = s.nextInt();
+        System.out.println("Enter column:");
+        c = s.nextInt();
+
+
+        //accept the first matrix
+        System.out.println("Enter first matrix: ");
+        m1 = new Matrix(r,c);
+        m1.get_input();
+        m1.print_matrix();
+
+        System.out.println();
+        //accept the second matrix
+        System.out.println("Enter second matrix:>>");
+        m2 = new Matrix(r,c);
+        m2.get_input();
+        m2.print_matrix();
+
+        System.out.println();
+        System.out.println(m2.size());
+        System.out.println();
+
+        Matrix A = Matrix.random(2, 2);
+        A.print_matrix();
+        System.out.println();
+        System.out.println();
+        Matrix B = Matrix.random(2, 2);
+        B.print_matrix();
+        System.out.println();
+        B.times(A).print_matrix();
+        System.out.println();
+
+        //var A=new Matrix(1,1);
+        //var B=new Matrix(2,3);
+        //Matrix A = Matrix.random(2, 2);
+        //A.print_matrix();
+        //Matrix B = Matrix.random(2, 2);
+        //B.print_matrix();
+        System.out.println();
+        System.out.println(m1.getColumn(1));
+
+
+        System.out.println(A.equals(B));
+        //System.out.println(A.hashCode());
+        //Matrix A = Matrix.randomise(2);
+        //A.print_matrix();
+
+
+
+
+
+
+    }
+}
